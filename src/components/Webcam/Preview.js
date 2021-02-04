@@ -2,8 +2,16 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { resetCameraImage, selectCameraImage } from '../../features/cameraSlice';
-import CloseIcon from '@material-ui/icons/Close';
 import './Preview.css';
+import CloseIcon from '@material-ui/icons/Close';
+import TextFieldsIcon from '@material-ui/icons/TextFields';
+import CreateIcon from '@material-ui/icons/Create';
+import NoteIcon from '@material-ui/icons/Note';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import CropIcon from '@material-ui/icons/Crop';
+import TimerIcon from '@material-ui/icons/Timer';
+import SendIcon from '@material-ui/icons/Send';
 
 export default function Preview(){
     const cameraImage = useSelector(selectCameraImage);
@@ -23,7 +31,20 @@ export default function Preview(){
     return(
         <div className='preview'>
             <CloseIcon onClick={closePreview} className='preview_close' />
+            <div className='preview_toolbarRight'>
+                <TextFieldsIcon />
+                <CreateIcon />
+                <NoteIcon />
+                <MusicNoteIcon />
+                <AttachFileIcon />
+                <CropIcon />
+                <TimerIcon />
+            </div>
             <img src={cameraImage}/>
+            <div className='preview_footer'>
+                <p>Send Now</p>
+                <SendIcon fontSize='small' className='preview_sendIcon' />
+            </div>
         </div>
     )
 }
