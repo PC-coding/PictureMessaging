@@ -49,7 +49,7 @@ export default function Preview(){
                         username: 'Partap',
                         read: false,
                         //ProfilePic,
-                        timestamp: firebase.firestore.FieldValue.serverTimeStamp(),
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                     });
                     history.replace('/chats');
                 });
@@ -70,9 +70,9 @@ export default function Preview(){
                 <TimerIcon />
             </div>
             <img src={cameraImage}/>
-            <div className='preview_footer'>
+            <div  onClick={sendPost} className='preview_footer'>
                 <p>Send Now</p>
-                <SendIcon onClick={sendPost} fontSize='small' className='preview_sendIcon' />
+                <SendIcon fontSize='small' className='preview_sendIcon' />
             </div>
         </div>
     )
