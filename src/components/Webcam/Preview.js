@@ -33,9 +33,7 @@ export default function Preview(){
 
     const sendPost = () => {
         const id = uuid();
-        const uploadTask = storage
-                            .ref(`post/${id}`)
-                            .putString(cameraImage, 'data_url');
+        const uploadTask = storage.ref(`posts/${id}`).putString(cameraImage, 'data_url');
         uploadTask.on('state_changed', 
             null, 
             (error) => {
