@@ -10,12 +10,12 @@ function App() {
       <Router>
         <div className='app_body'>
           <Switch>
-            <Route exact path ='/preview'>
-              <Preview />
-            </Route>
-
             <Route exact path ='/'>
               <WebcamCapture />
+            </Route>
+
+            <Route exact path ='/preview'>
+              <Preview />
             </Route>
           </Switch>
         </div>
