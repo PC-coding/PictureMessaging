@@ -4,7 +4,7 @@ import { Avatar } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search'
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble'
 import { db } from '../firebase';
-import { Chat } from '@material-ui/icons';
+import Chat from './Chat';
 
 export default function Chats() {
     const [posts, setPosts] = useState([]);
