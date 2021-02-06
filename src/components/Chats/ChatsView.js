@@ -7,17 +7,17 @@ import './ChatsView.css';
 export default function ChatsView() {
     const selectedImage = useSelector(selectSelectedImage);
     const history = useHistory();
-
+    
     useEffect(() => {
         if (!selectedImage) {
             exit();
         }
-    }, [])
+    }, [selectedImage]);
 
     const exit = () => {
         history.replace('/chats')
-    }
-
+    };
+    
     return(
         <div className='chatsView'>
             <img src={selectedImage} onClick={exit} alt='' />

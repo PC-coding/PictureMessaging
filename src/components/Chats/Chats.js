@@ -12,9 +12,9 @@ export default function Chats() {
     useEffect(() => {
         db.collection('posts')
             .orderBy('timestamp', 'desc')
-            .onSnapshot(snapshot => 
+            .onSnapshot((snapshot) => 
                 setPosts(
-                    snapshot.docs.map(doc => ( {
+                    snapshot.docs.map((doc) => ({
                         id: doc.id,
                         data: doc.data(),
                     }))
@@ -33,7 +33,11 @@ export default function Chats() {
                 <ChatBubbleIcon className='chats_chatIcon' />
             </div>
             <div className='chats_posts'>
-                {posts.map(({id, data: {profilePic, username, timestamp, imageUrl, read}}) => (
+                {posts.map(
+                    ({
+                        id, 
+                        data: { profilePic, username, timestamp, imageUrl, read }, 
+                    }) => (
                     <Chat
                         key={id}
                         id={id}
