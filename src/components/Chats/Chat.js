@@ -11,9 +11,16 @@ export default function Chat({ id, username, timestamp, read, imageUrl, profileP
 
     const open = () => {
         if (!read) {
-            dispatchEvent(selectImage(imageUrl));
+            dispatch(selectImage(imageUrl));
+            db.collection('posts').doc(id).set(
+                {
+                    read: true,
+                }, 
+                {   merge: true}
+            );
+            history.pushState('/chats/view');
         }
-    }
+    };
     
     return(
         <div onClick={open} className='chat'>
