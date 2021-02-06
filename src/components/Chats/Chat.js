@@ -4,11 +4,14 @@ import { Avatar } from '@material-ui/core';
 import StopRoundedIcon from '@material-ui/icons/StopRounded'
 import ReactTimeago from 'react-timeago';
 import { selectImage } from '../../features/appSlice';
+import { useDispatch } from 'react-redux';
 
 export default function Chat({ id, username, timestamp, read, imageUrl, profilePic}){
+    const dispatch = useDispatch();
+
     const open = () => {
         if (!read) {
-            dispatchEvent(selectImage)
+            dispatchEvent(selectImage(imageUrl));
         }
     }
     
