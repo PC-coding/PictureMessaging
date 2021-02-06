@@ -4,9 +4,15 @@ import { Avatar } from '@material-ui/core';
 import StopRoundedIcon from '@material-ui/icons/StopRounded'
 import ReactTimeago from 'react-timeago';
 
-export default function Chat({ id, username, timestamp, read, imageUrl, profilePic}){
+export default function Chat({ id, username, timestamp, read, imageUrl, profilePic, selectImage}){
+    const open = () => {
+        if (!read) {
+            dispatchEvent(selectImage)
+        }
+    }
+    
     return(
-        <div className='chat'>
+        <div onClick={open} className='chat'>
             <Avatar className='chat_avatar' src={profilePic}/>
             <div className='chat_info'>
                 <h4>{username}</h4>
