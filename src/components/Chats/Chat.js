@@ -3,8 +3,9 @@ import './Chat.css';
 import { Avatar } from '@material-ui/core';
 import StopRoundedIcon from '@material-ui/icons/StopRounded'
 import ReactTimeago from 'react-timeago';
+import { selectImage } from '../../features/appSlice';
 
-export default function Chat({ id, username, timestamp, read, imageUrl, profilePic, selectImage}){
+export default function Chat({ id, username, timestamp, read, imageUrl, profilePic}){
     const open = () => {
         if (!read) {
             dispatchEvent(selectImage)
