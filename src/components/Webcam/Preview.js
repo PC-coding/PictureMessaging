@@ -45,7 +45,7 @@ export default function Preview(){
                 .getDownloadURL()
                 .then((url) => {
                     db.collection('posts').add({
-                        imageURl: url,
+                        imageUrl: url,
                         username: 'Partap',
                         read: false,
                         //ProfilePic,

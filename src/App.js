@@ -24,7 +24,7 @@ function App() {
               <Chats />
             </Route>
 
-            <Route exact path='/chats/view'>
+            <Route path='/chats/view'>
               <ChatsView />
             </Route>
           </Switch>

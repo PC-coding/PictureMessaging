@@ -20,7 +20,7 @@ export default function ChatsView() {
     
     return(
         <div className='chatsView'>
-            <img src={selectedImage} alt="" onClick={exit} />
+            <img src={selectedImage} onClick={exit} alt="" />
         </div>
     )
 }
