@@ -69,8 +69,8 @@ export default function Preview(){
                 <CropIcon />
                 <TimerIcon />
             </div>
-            <img src={cameraImage}/>
-            <div  onClick={sendPost} className='preview_footer'>
+            <img src={cameraImage} alt=''/>
+            <div onClick={sendPost} className='preview_footer'>
                 <p>Send Now</p>
                 <SendIcon fontSize='small' className='preview_sendIcon' />
             </div>
