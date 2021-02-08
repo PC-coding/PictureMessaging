@@ -24,8 +24,7 @@ export default function Chat({ id, username, timestamp, read, imageUrl, profileP
             history.push('/chats/view');
         }
     };
-    console.log(imageUrl);
-    console.log(selectImage)
+
     return(
         <div onClick={open} className='chat'>
             <Avatar className='chat_avatar' src={profilePic}/>

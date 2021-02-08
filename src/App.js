@@ -16,15 +16,15 @@ function App() {
               <WebcamCapture />
             </Route>
 
-            <Route path='/preview'>
+            <Route exact path='/preview'>
               <Preview />
             </Route>
 
-            <Route path='/chats'>
+            <Route exact path='/chats'>
               <Chats />
             </Route>
 
-            <Route path='/chats/view'>
+            <Route exact path='/chats/view'>
               <ChatsView />
             </Route>
           </Switch>
