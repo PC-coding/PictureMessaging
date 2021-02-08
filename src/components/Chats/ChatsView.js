@@ -34,6 +34,9 @@ export default function ChatsView() {
                 ]}
             >
                 {({remainingTime}) => {
+                    if (remainingTime === 0) {
+                        exit();
+                    }
                     return remainingTime;
                 }}
             </CountdownCircleTimer>
