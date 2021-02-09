@@ -71,3 +71,13 @@
 .chatsPic:hover {
     opacity: 0.8;
 }
+
+.chatsSearchIcon {
+    color: white;
+    font-size: 13px !important;
+}
+
+.chats_chatIcon {
+    color: white;
+    font-size: 18px !important;
+}

@@ -15,11 +15,13 @@ import SendIcon from '@material-ui/icons/Send';
 import { v4 as uuid } from 'uuid';
 import firebase from 'firebase';
 import { db, storage } from '../firebase';
+import { selectUser } from '../../features/appSlice';
 
 export default function Preview(){
     const cameraImage = useSelector(selectCameraImage);
     const history = useHistory();
     const dispatch = useDispatch();
+    const user = useSelector(selectUser);
 
     useEffect(() => {
         if (!cameraImage) {
@@ -48,7 +50,7 @@ export default function Preview(){
                         imageUrl: url,
                         username: 'Partap',
                         read: false,
-                        //ProfilePic,
+                        profilePic: user.profilePic,
                         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                     });
                     history.replace('/chats');
