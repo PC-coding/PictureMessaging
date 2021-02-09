@@ -3,11 +3,14 @@ import './Chats.css';
 import { Avatar } from '@material-ui/core'
 import SearchIcon from '@material-ui/icons/Search'
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble'
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
 import Chat from './Chat.js';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/appSlice';
 
 export default function Chats() {
     const [posts, setPosts] = useState([]);
+    const user = useSelector(selectUser);
 
     useEffect(() => {
         db.collection('posts').orderBy('timestamp', 'desc').onSnapshot((snapshot) => setPosts(
@@ -22,7 +25,7 @@ export default function Chats() {
     return(
         <div className='chats'>
             <div className='chats_header'>
-                <Avatar className='chats_avatar' />
+                <Avatar src={user.profilePic} onClick={() => auth.signOut()} className='chats_avatar' />
                 <div className='chats_search'>
                     <SearchIcon />
                     <input placeholder='Friends' type='text' />
