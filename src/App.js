@@ -38,23 +38,25 @@ function App() {
           <>
           <img className='applogo' src={Daco} alt='' />
           <div className='app_body'>
-            <Switch>
-              <Route exact path='/'>
-                <WebcamCapture />
-              </Route>
+            <div className='app_bodyBG'>
+              <Switch>
+                <Route exact path='/'>
+                  <WebcamCapture />
+                </Route>
 
-              <Route exact path='/preview'>
-                <Preview />
-              </Route>
+                <Route exact path='/preview'>
+                  <Preview />
+                </Route>
 
-              <Route exact path='/chats'>
-                <Chats />
-              </Route>
+                <Route exact path='/chats'>
+                  <Chats />
+                </Route>
 
-              <Route exact path='/chats/view'>
-                <ChatsView />
-              </Route>
-            </Switch>
+                <Route exact path='/chats/view'>
+                  <ChatsView />
+                </Route>
+              </Switch>
+            </div>
           </div>
         </>
         )}
