@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Login from './components/Login/Login';
 import { login, logout, selectUser } from './features/appSlice';
 import { auth } from './components/firebase';
+import Daco from './Daco_4047867.png'
 
 function App() {
   const user = useSelector(selectUser);
@@ -34,25 +35,28 @@ function App() {
         {!user ? (
           <Login />
         ) : (
+          <>
+          <img className='applogo' src={Daco} alt='' />
           <div className='app_body'>
-          <Switch>
-            <Route exact path='/'>
-              <WebcamCapture />
-            </Route>
+            <Switch>
+              <Route exact path='/'>
+                <WebcamCapture />
+              </Route>
 
-            <Route exact path='/preview'>
-              <Preview />
-            </Route>
+              <Route exact path='/preview'>
+                <Preview />
+              </Route>
 
-            <Route exact path='/chats'>
-              <Chats />
-            </Route>
+              <Route exact path='/chats'>
+                <Chats />
+              </Route>
 
-            <Route exact path='/chats/view'>
-              <ChatsView />
-            </Route>
-          </Switch>
-        </div>
+              <Route exact path='/chats/view'>
+                <ChatsView />
+              </Route>
+            </Switch>
+          </div>
+        </>
         )}
       </Router>
     </div>

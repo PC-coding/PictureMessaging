@@ -6,3 +6,8 @@
   background-color: red;
   height: 100vh;
 }
+
+.applogo {
+  object-fit: contain;
+  height: 100px;
+}
