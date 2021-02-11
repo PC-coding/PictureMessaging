@@ -30,7 +30,7 @@ Technologies used: React, JavaScript, CSS.
 </ul>
 
 # Demo
-![PictureMessenger](https://im7.ezgif.com/tmp/ezgif-7-08c557005607.gif)
+![PictureMessenger](https://media.giphy.com/media/r91WimJjTN6bauA9Bi/giphy.gif)
 
 # Sources
 <a href="https://reactjs.org/docs/getting-started.html"> React documentation </a><br/>
