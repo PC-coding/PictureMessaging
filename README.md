@@ -8,7 +8,7 @@ Functionalities include:
 - Camera to take pictures
 - Sending + receiving picture messages
 
-Technologies used: React, Redux, JavaScript, CSS.
+Technologies used: React, Redux, JavaScript, Google Firebase and CSS.
 
 <a href='https://picture-messaging.web.app/'>Check it out here!</a>
 </p>
